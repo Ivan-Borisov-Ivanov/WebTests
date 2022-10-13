@@ -91,10 +91,15 @@ public class ClientTest extends BaseTest {
     }
 
     @Test
-    public void issueInvoiceTest(){
+    public void issueInvoiceTest() {
         this.goToClientPage();
         ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
         ClientPage.issueInvoiceButton();
+        NewInvoicePage.clickOnShowListButton();
+        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
+        NewInvoicePage.clickOnNoVatCheckBox();
+        NewInvoicePage.clickOnButtonCreateInvoice();
+        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
     }
 
     @Test

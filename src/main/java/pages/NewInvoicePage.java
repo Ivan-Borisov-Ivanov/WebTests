@@ -1,6 +1,7 @@
 package pages;
 
 import net.bytebuddy.utility.RandomString;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,8 +19,7 @@ public class NewInvoicePage extends BasePage {
     @FindBy(xpath = "//a[@data-search-field='input[name=obj_0_name]']")
     private static WebElement showListButton;
 
-//    @FindBy(xpath = "//a[contains(.,'%s')]")
-//    private static WebElement selectItem;
+    private static String selectItem = "//a[contains(.,'%s')]";
 
     @FindBy(id = "no_vat")
     private static WebElement noVatCheckbox;
@@ -69,7 +69,9 @@ public class NewInvoicePage extends BasePage {
      * This method select item from item list
      */
     public static void selectItemFromItemList(String itemName) {
-        selectItemFromItemList(itemName);
+        String loc = selectItem.replace("%s", itemName);
+        WebElement choseItem = Browser.driver.findElement(By.xpath(loc));
+        choseItem.click();
     }
 
     /**

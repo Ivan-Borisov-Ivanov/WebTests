@@ -13,11 +13,11 @@ import static org.testng.Assert.assertTrue;
 
 public class BasePage {
 
-    private static String objectValue = "//div[@class='simplebox']//td[contains(.,'%s')]/following-sibling::td";
-
     public static void navigate(String url) {
         Browser.driver.get("https://mycompany-ood.inv.bg/" + url);
     }
+
+    private static final String objectValue = "//div[@class='simplebox']//td[contains(.,'%s')]/following-sibling::td";
 
     public static void waitForElementToBeClickable(WebElement webElement) {
         WebDriverWait driverWait = new WebDriverWait(Browser.driver, 10);
