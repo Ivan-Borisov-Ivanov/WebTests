@@ -40,7 +40,6 @@ public class InvoiceTest extends BaseTest {
         NewInvoicePage.clickOnShowListButton();
         NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
         NewInvoicePage.assertMoneyAmountTotal();
-//        NewInvoicePage.selectItemFromItemList(itemInfo.getDifferentItem());
     }
 
 }

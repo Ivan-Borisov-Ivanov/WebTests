@@ -15,7 +15,7 @@ public class Browser {
         driver.manage().window().maximize();
     }
 
-//    public static void tearDown() {
-//        driver.quit();
-//    }
+    public static void tearDown() {
+        driver.quit();
+    }
 }

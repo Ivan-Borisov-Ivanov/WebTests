@@ -119,15 +119,4 @@ public class ItemsPage extends BasePage {
     public static void assertItemWasDeletedSuccessful() {
         Assert.assertTrue(informationBarSuccessfulDeletedItem.getText().contains("Артикулът беше изтрит успешно."));
     }
-
-//    public static void assertElementIsDeleted(WebElement item) {
-//        hardWait(3000);
-//        WebElement itemElement = Browser.driver.findElement(By.xpath(item.replace("%s", itemName)));
-//        elementDoesNotPresent(item);
-//    }
-//
-//    public static WebElement getItemAsWebElementByName(String itemName) {
-//
-//        return Browser.driver.findElement(By.xpath(item.replace("%s", itemName)));
-//    }
 }
