@@ -9,7 +9,7 @@ import lombok.Setter;
 public class CompanyTestData {
 
     String companyName = "Моята Компаня ООД";
-    String companyAddress = "бул. Мария Луиза № 112";
+    String companyAddress = "бул. Мария Луиза № 113";
     String companyCity = "София";
     String companyWithoutName = "";
     String emptyCompanyAddress = "";
