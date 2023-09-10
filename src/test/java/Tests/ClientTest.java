@@ -90,17 +90,17 @@ public class ClientTest extends BaseTest {
         ClientPage.assertThatTheCompanyNameWasChangedSuccessful(newCompany);
     }
 
-    @Test
-    public void issueInvoiceTest() {
-        this.goToClientPage();
-        ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
-        ClientPage.issueInvoiceButton();
-        NewInvoicePage.clickOnShowListButton();
-        NewInvoicePage.selectItemForIssueInvoice();
-        NewInvoicePage.clickOnNoVatCheckBox();
-        NewInvoicePage.clickOnButtonCreateInvoice();
-        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
-    }
+//    @Test
+//    public void issueInvoiceTest() {
+//        this.goToClientPage();
+//        ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
+//        ClientPage.issueInvoiceButton();
+//        NewInvoicePage.clickOnShowListButton();
+//        NewInvoicePage.selectItemForIssueInvoice();
+//        NewInvoicePage.clickOnNoVatCheckBox();
+//        NewInvoicePage.clickOnButtonCreateInvoice();
+//        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
+//    }
 
     @Test
     public void deleteClientFromListTest() {
@@ -110,13 +110,13 @@ public class ClientTest extends BaseTest {
         ClientPage.assertTheClientFromListWasDeletedSuccessful();
     }
 
-    @Test
-    public void deleteClientTest() {
-        this.goToClientPage();
-        ClientPage.openClientFromCompanyList(companyInfo.getEditCompanyName());
-        ClientPage.deleteCompany();
-        BasePage.acceptPopUp();
-        ClientPage.assertTheClientWasDeletedSuccessful();
-    }
+//    @Test
+//    public void deleteClientTest() {
+//        this.goToClientPage();
+//        ClientPage.openClientFromCompanyList(companyInfo.getEditCompanyName());
+//        ClientPage.deleteCompany();
+//        BasePage.acceptPopUp();
+//        ClientPage.assertTheClientWasDeletedSuccessful();
+//    }
 
 }

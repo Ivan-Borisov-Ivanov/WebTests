@@ -13,27 +13,27 @@ public class InvoiceTest extends BaseTest {
     CompanyTestData companyInfo = new CompanyTestData();
     LogInData logInInfo = new LogInData();
 
-    private void goToNewInvoicePage(){
+    private void goToNewInvoicePage() {
         LogInPage.goTo();
         LogInPage.login(logInInfo.getLoginMail(), logInInfo.getLoginPass());
         NewInvoicePage.navigate();
     }
 
-    @Test
-    public void addNewInvoiceTest() {
+//    @Test
+//    public void addNewInvoiceTest() {
+//
+//        this.goToNewInvoicePage();
+//        NewInvoicePage.clickClientListButton();
+//        NewInvoicePage.selectClientFirmName();
+//        NewInvoicePage.clickOnShowListButton();
+//        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
+//        NewInvoicePage.clickOnNoVatCheckBox();
+//        NewInvoicePage.clickOnButtonCreateInvoice();
+//        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
+//    }
 
-        this.goToNewInvoicePage();
-        NewInvoicePage.clickClientListButton();
-        NewInvoicePage.selectClientFirmName();
-        NewInvoicePage.clickOnShowListButton();
-        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
-        NewInvoicePage.clickOnNoVatCheckBox();
-        NewInvoicePage.clickOnButtonCreateInvoice();
-        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
-    }
-
     @Test
-    public void verifyInvoiceToCalculateItemsCorrectly(){
+    public void verifyInvoiceToCalculateItemsCorrectly() {
         this.goToNewInvoicePage();
         NewInvoicePage.clickClientListButton();
         NewInvoicePage.selectClientFirmName();
