@@ -23,6 +23,7 @@ public class BasePage {
         WebDriverWait driverWait = new WebDriverWait(Browser.driver, 10);
         driverWait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
+
     public static void waitForElementToBeVisible(WebElement webElement) {
         WebDriverWait driverWait = new WebDriverWait(Browser.driver, 10);
         driverWait.until(ExpectedConditions.elementToBeSelected(webElement));
@@ -39,7 +40,6 @@ public class BasePage {
 
         return newElement.getText();
     }
-
 
 
     public static void acceptPopUp() {

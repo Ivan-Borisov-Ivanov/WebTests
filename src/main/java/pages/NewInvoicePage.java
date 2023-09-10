@@ -16,7 +16,7 @@ public class NewInvoicePage extends BasePage {
     @FindBy(xpath = "//a[contains(@class,'client-popup-client-63')]")
     private static WebElement selectClientFirmNameField;
 
-    @FindBy(xpath = "//a[@data-search-field='input[name=obj_0_name]']")
+    @FindBy(xpath = "//a[contains (@class,'selenium-open-item-selector-modal-0')]")
     private static WebElement showListButton;
 
     private static String selectItem = "//a[contains(.,'%s')]";
@@ -32,6 +32,9 @@ public class NewInvoicePage extends BasePage {
 
     @FindBy(xpath = "//b[@id='money_amount_total']")
     private static WebElement moneyAmountTotalField;
+
+    @FindBy(xpath = "//a[contains (@class,'keyElementSelected')]")
+    private static WebElement selectItemForInvoice;
 
     static {
         PageFactory.initElements(Browser.driver, NewInvoicePage.class);
@@ -72,6 +75,14 @@ public class NewInvoicePage extends BasePage {
         String loc = selectItem.replace("%s", itemName);
         WebElement choseItem = Browser.driver.findElement(By.xpath(loc));
         choseItem.click();
+    }
+
+    /**
+     * This method select item for issue invoice
+     */
+    public static void selectItemForIssueInvoice(){
+        waitForElementToBeVisible(selectItemForInvoice);
+        selectItemForInvoice.click();
     }
 
     /**

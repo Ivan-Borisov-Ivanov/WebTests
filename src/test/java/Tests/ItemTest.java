@@ -47,6 +47,15 @@ public class ItemTest extends BaseTest {
     }
 
     @Test
+    public void deleteItemFormItemListTest() {
+        this.goToItemsPage();
+        ItemsPage.selectItem(itemInfo.getNameBg());
+        ItemsPage.deleteSelectedItem();
+        BasePage.acceptPopUp();
+        ItemsPage.assertItemWasDeletedSuccessful();
+    }
+
+    @Test
     public void verifyReadCreatedItemTest() {
         this.goToItemsPage();
         ItemsPage.clickOnNewItemButton();
@@ -75,7 +84,7 @@ public class ItemTest extends BaseTest {
 
 
     @Test
-    public void deleteItemFromItemListTest() {
+    public void deleteEditedItemFromItemListTest() {
         this.goToItemsPage();
         ItemsPage.selectItem(itemInfo.getOtherNameBg());
         ItemsPage.deleteSelectedItem();

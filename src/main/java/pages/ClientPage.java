@@ -165,8 +165,8 @@ public class ClientPage extends BasePage {
      */
     public static void selectClientFromClientList(String clientName) {
         String loc = client.replace("%s", clientName);
-        WebElement newSelectElement = Browser.driver.findElement(By.xpath(loc));
-        newSelectElement.click();
+        WebElement newSelectedElement = Browser.driver.findElement(By.xpath(loc));
+        newSelectedElement.click();
     }
 
     /**
@@ -176,8 +176,8 @@ public class ClientPage extends BasePage {
      */
     public static void editClientFromClientList(String clientName) {
         String loc = clientEditButton.replace("%s", clientName);
-        WebElement newEditElement = Browser.driver.findElement(By.xpath(loc));
-        newEditElement.click();
+        WebElement newEditedElement = Browser.driver.findElement(By.xpath(loc));
+        newEditedElement.click();
     }
 
     /**

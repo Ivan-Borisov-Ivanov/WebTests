@@ -38,11 +38,11 @@ public class LogInPage {
     /**
      * This method tries to log you in with the provided credentials.
      *
-     * @param randomMail The emailaddress that you want to log in with.
+     * @param mail The emailaddress that you want to log in with.
      * @param password   The password that you want to log in with.
      */
-    public static void login(String randomMail, String password) {
-        writeInTheEmailAddressInputField(randomMail);
+    public static void login(String mail, String password) {
+        writeInTheEmailAddressInputField(mail);
         writeThePasswordInputField(password);
         clickLoginButton();
     }
@@ -50,11 +50,11 @@ public class LogInPage {
     /**
      * This method Writes text in the 'emailAddress' input field.
      *
-     * @param randomMail The email that you want to log in with.
+     * @param mail The email that you want to log in with.
      */
-    private static void writeInTheEmailAddressInputField(String randomMail) {
+    private static void writeInTheEmailAddressInputField(String mail) {
 
-        emailAddressInputField.sendKeys(randomMail);
+        emailAddressInputField.sendKeys(mail);
     }
 
     /**

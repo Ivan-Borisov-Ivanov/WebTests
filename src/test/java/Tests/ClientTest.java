@@ -96,7 +96,7 @@ public class ClientTest extends BaseTest {
         ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
         ClientPage.issueInvoiceButton();
         NewInvoicePage.clickOnShowListButton();
-        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
+        NewInvoicePage.selectItemForIssueInvoice();
         NewInvoicePage.clickOnNoVatCheckBox();
         NewInvoicePage.clickOnButtonCreateInvoice();
         NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
