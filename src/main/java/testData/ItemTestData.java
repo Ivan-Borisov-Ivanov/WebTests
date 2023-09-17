@@ -17,4 +17,6 @@ public class ItemTestData {
     String otherNameBg = "Принтер";
     String otherNameEn = "Printer";
     String differentItem = "Таблет";
+    String otherItemNameBg = "Лаптоп";
+    String otherItemNameEn = "Laptop";
 }

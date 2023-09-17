@@ -113,6 +113,6 @@ public class NewInvoicePage extends BasePage {
      * This method assert money amount total is calculate correct
      */
     public static void assertMoneyAmountTotal(){
-        Assert.assertEquals(moneyAmountTotalField.getText(), "2500.00");
+        Assert.assertEquals(moneyAmountTotalField.getText(), "2300.00");
     }
 }

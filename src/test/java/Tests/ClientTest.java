@@ -122,13 +122,13 @@ public class ClientTest extends BaseTest {
 
     }
 
-        @Test
-        public void deleteClientTest() {
-            this.goToClientPage();
-            ClientPage.openClientFromCompanyList(companyInfo.getOtherCompanyName());
-            ClientPage.deleteCompany();
-            BasePage.acceptPopUp();
-            ClientPage.assertTheClientWasDeletedSuccessful();
-        }
-
+    @Test
+    public void deleteClientTest() {
+        this.goToClientPage();
+        ClientPage.openClientFromCompanyList(companyInfo.getOtherCompanyName());
+        ClientPage.deleteCompany();
+        BasePage.acceptPopUp();
+        ClientPage.assertTheClientWasDeletedSuccessful();
     }
+
+}

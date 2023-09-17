@@ -1,17 +1,14 @@
 package Tests;
 
 import Core.BaseTest;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.*;
-import testData.CompanyTestData;
 import testData.ItemTestData;
 import testData.LogInData;
 
 public class ItemTest extends BaseTest {
 
     ItemTestData itemInfo = new ItemTestData();
-    CompanyTestData companyInfo = new CompanyTestData();
     LogInData logInInfo = new LogInData();
 
     private void goToItemsPage() {
@@ -93,9 +90,22 @@ public class ItemTest extends BaseTest {
     }
 
     @Test
+    public void addOtherItemTest() {
+        this.goToItemsPage();
+        ItemsPage.clickOnNewItemButton();
+        ItemsPage.assertWeAreInNewItemPage();
+        NewItemPage.inputInItemNameField(itemInfo.getOtherItemNameBg());
+        NewItemPage.inputInItemNameFieldEng(itemInfo.getOtherItemNameEn());
+        NewItemPage.inputPriceOfTheItem(itemInfo.getPcPrice());
+        NewItemPage.inputBankAccount(itemInfo.getBankAccount());
+        NewItemPage.clickOnAddItemButton();
+        NewItemPage.assertItemWasAddedSuccessful();
+    }
+
+    @Test
     public void deleteItemTest() {
         this.goToItemsPage();
-        ItemsPage.openItem(itemInfo.getOtherNameBg());
+        ItemsPage.openItem(itemInfo.getOtherItemNameBg());
         ItemsPage.deleteItem();
         BasePage.acceptModal();
         ItemsPage.assertItemWasDeletedSuccessful();

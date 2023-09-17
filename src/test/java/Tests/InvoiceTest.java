@@ -3,14 +3,12 @@ package Tests;
 import Core.BaseTest;
 import org.testng.annotations.Test;
 import pages.*;
-import testData.CompanyTestData;
 import testData.ItemTestData;
 import testData.LogInData;
 
 public class InvoiceTest extends BaseTest {
 
     ItemTestData itemInfo = new ItemTestData();
-    CompanyTestData companyInfo = new CompanyTestData();
     LogInData logInInfo = new LogInData();
 
     private void goToNewInvoicePage() {

@@ -3,15 +3,11 @@ package Tests;
 import Core.BaseTest;
 import org.testng.annotations.Test;
 import pages.*;
-import testData.CompanyTestData;
-import testData.ItemTestData;
 import testData.LogInData;
 
 
 public class LogInTest extends BaseTest {
 
-    ItemTestData itemInfo = new ItemTestData();
-    CompanyTestData companyInfo = new CompanyTestData();
     LogInData logInInfo = new LogInData();
 
 
@@ -24,14 +20,14 @@ public class LogInTest extends BaseTest {
     }
 
     @Test
-    public void loginInLoginPageWithWrongEmailTest(){
+    public void loginInLoginPageWithWrongEmailTest() {
         LogInPage.goTo();
         LogInPage.login(logInInfo.getWrongLoginMail(), logInInfo.getLoginPass());
         LogInPage.assertErrMsgWrongUserOrPassAppears();
     }
 
     @Test
-    public void loginInLoginPageWithWrongPasswordTest(){
+    public void loginInLoginPageWithWrongPasswordTest() {
         LogInPage.goTo();
         LogInPage.login(logInInfo.getLoginMail(), logInInfo.getWrongLoginPass());
         LogInPage.assertErrMsgWrongUserOrPassAppears();
