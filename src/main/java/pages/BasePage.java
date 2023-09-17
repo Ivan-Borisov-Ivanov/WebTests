@@ -46,6 +46,10 @@ public class BasePage {
         Browser.driver.switchTo().alert().accept();
     }
 
+    public static void acceptModal() {
+        Browser.driver.findElement(By.xpath("//button[contains(.,'Да')]")).click();
+    }
+
     public static void elementDoesNotPresent(WebElement webElement) {
         assertFalse(webElement.isDisplayed());
     }

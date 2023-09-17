@@ -14,4 +14,5 @@ public class CompanyTestData {
     String companyWithoutName = "";
     String emptyCompanyAddress = "";
     String editCompanyName = "Моята Компаня БГ АД";
+    String OtherCompanyName = "ИТ Магазин ООД";
 }

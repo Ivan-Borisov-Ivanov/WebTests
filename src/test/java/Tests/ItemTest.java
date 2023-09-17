@@ -46,14 +46,14 @@ public class ItemTest extends BaseTest {
         NewItemPage.assertErrMsgAddressNameAppear();
     }
 
-//    @Test
-//    public void deleteItemFormItemListTest() {
-//        this.goToItemsPage();
-//        ItemsPage.selectItem(itemInfo.getNameBg());
-//        ItemsPage.deleteSelectedItem();
-//        BasePage.acceptPopUp();
-//        ItemsPage.assertItemWasDeletedSuccessful();
-//    }
+    @Test
+    public void deleteItemFormItemListTest() {
+        this.goToItemsPage();
+        ItemsPage.selectItem(itemInfo.getNameBg());
+        ItemsPage.deleteSelectedItem();
+        BasePage.acceptModal();
+        ItemsPage.assertItemWasDeletedSuccessful();
+    }
 
     @Test
     public void verifyReadCreatedItemTest() {
@@ -83,21 +83,21 @@ public class ItemTest extends BaseTest {
     }
 
 
-//    @Test
-//    public void deleteEditedItemFromItemListTest() {
-//        this.goToItemsPage();
-//        ItemsPage.selectItem(itemInfo.getOtherNameBg());
-//        ItemsPage.deleteSelectedItem();
-//        BasePage.acceptPopUp();
-//        ItemsPage.assertItemWasDeletedFromListSuccessful();
-//    }
+    @Test
+    public void deleteEditedItemFromItemListTest() {
+        this.goToItemsPage();
+        ItemsPage.selectItem(itemInfo.getOtherNameBg());
+        ItemsPage.deleteSelectedItem();
+        BasePage.acceptModal();
+        ItemsPage.assertItemWasDeletedSuccessful();
+    }
 
-//    @Test
-//    public void deleteItemTest() {
-//        this.goToItemsPage();
-//        ItemsPage.openItem(itemInfo.getOtherNameBg());
-//        ItemsPage.deleteItem();
-//        BasePage.acceptPopUp();
-//        ItemsPage.assertItemWasDeletedSuccessful();
-//    }
+    @Test
+    public void deleteItemTest() {
+        this.goToItemsPage();
+        ItemsPage.openItem(itemInfo.getOtherNameBg());
+        ItemsPage.deleteItem();
+        BasePage.acceptModal();
+        ItemsPage.assertItemWasDeletedSuccessful();
+    }
 }

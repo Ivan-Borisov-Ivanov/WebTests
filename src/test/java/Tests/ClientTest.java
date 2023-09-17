@@ -90,17 +90,17 @@ public class ClientTest extends BaseTest {
         ClientPage.assertThatTheCompanyNameWasChangedSuccessful(newCompany);
     }
 
-//    @Test
-//    public void issueInvoiceTest() {
-//        this.goToClientPage();
-//        ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
-//        ClientPage.issueInvoiceButton();
-//        NewInvoicePage.clickOnShowListButton();
-//        NewInvoicePage.selectItemForIssueInvoice();
-//        NewInvoicePage.clickOnNoVatCheckBox();
-//        NewInvoicePage.clickOnButtonCreateInvoice();
-//        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
-//    }
+    @Test
+    public void issueInvoiceTest() {
+        this.goToClientPage();
+        ClientPage.selectClientFromClientList(companyInfo.getEditCompanyName());
+        ClientPage.issueInvoiceButton();
+        NewInvoicePage.clickOnShowListButton();
+        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
+        NewInvoicePage.clickOnNoVatCheckBox();
+        NewInvoicePage.clickOnButtonCreateInvoice();
+        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
+    }
 
     @Test
     public void deleteClientFromListTest() {
@@ -110,13 +110,25 @@ public class ClientTest extends BaseTest {
         ClientPage.assertTheClientFromListWasDeletedSuccessful();
     }
 
-//    @Test
-//    public void deleteClientTest() {
-//        this.goToClientPage();
-//        ClientPage.openClientFromCompanyList(companyInfo.getEditCompanyName());
-//        ClientPage.deleteCompany();
-//        BasePage.acceptPopUp();
-//        ClientPage.assertTheClientWasDeletedSuccessful();
-//    }
+    @Test
+    public void addOtherClientTest() {
+        this.goToClientPage();
+        ClientPage.clickNewClientButton();
+        ClientPage.insertCompanyNameInTheField(companyInfo.getOtherCompanyName());
+        ClientPage.insertCompanyAddress(companyInfo.getCompanyAddress());
+        ClientPage.insertTheCityOfTheCompany(companyInfo.getCompanyCity());
+        ClientPage.clickAddClientButton();
+        ClientPage.assertTheClientWasCreatedSuccessful();
 
-}
+    }
+
+        @Test
+        public void deleteClientTest() {
+            this.goToClientPage();
+            ClientPage.openClientFromCompanyList(companyInfo.getOtherCompanyName());
+            ClientPage.deleteCompany();
+            BasePage.acceptPopUp();
+            ClientPage.assertTheClientWasDeletedSuccessful();
+        }
+
+    }

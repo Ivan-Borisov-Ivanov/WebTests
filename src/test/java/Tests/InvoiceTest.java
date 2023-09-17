@@ -19,18 +19,18 @@ public class InvoiceTest extends BaseTest {
         NewInvoicePage.navigate();
     }
 
-//    @Test
-//    public void addNewInvoiceTest() {
-//
-//        this.goToNewInvoicePage();
-//        NewInvoicePage.clickClientListButton();
-//        NewInvoicePage.selectClientFirmName();
-//        NewInvoicePage.clickOnShowListButton();
-//        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
-//        NewInvoicePage.clickOnNoVatCheckBox();
-//        NewInvoicePage.clickOnButtonCreateInvoice();
-//        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
-//    }
+    @Test
+    public void addNewInvoiceTest() {
+
+        this.goToNewInvoicePage();
+        NewInvoicePage.clickClientListButton();
+        NewInvoicePage.selectClientFirmName();
+        NewInvoicePage.clickOnShowListButton();
+        NewInvoicePage.selectItemFromItemList(itemInfo.getNameBg());
+        NewInvoicePage.clickOnNoVatCheckBox();
+        NewInvoicePage.clickOnButtonCreateInvoice();
+        NewInvoicePage.assertThatTheInvoiceWasCreatedSuccessful();
+    }
 
     @Test
     public void verifyInvoiceToCalculateItemsCorrectly() {
