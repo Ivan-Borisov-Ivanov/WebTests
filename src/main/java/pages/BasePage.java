@@ -3,13 +3,11 @@ package pages;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Browser;
 
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
 public class BasePage {
 

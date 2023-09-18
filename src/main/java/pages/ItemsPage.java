@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import utils.Browser;
 
-import javax.xml.xpath.XPath;
-
 public class ItemsPage extends BasePage {
     @FindBy(css = ".newbtn")
     private static WebElement newItemButton;
@@ -104,13 +102,6 @@ public class ItemsPage extends BasePage {
         String loc = objectName.replace("%s", itemName);
         WebElement newElement = Browser.driver.findElement(By.xpath(loc));
         newElement.click();
-    }
-
-    /**
-     * This method assert that the item was deleted from list Successful
-     */
-    public static void assertItemWasDeletedFromListSuccessful() {
-        Assert.assertTrue(informationBarSuccessfulDeletedItem.getText().contains("Избраните артикули бяха изтрити успешно."));
     }
 
     /**

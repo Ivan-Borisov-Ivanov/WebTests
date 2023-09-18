@@ -8,8 +8,6 @@ import org.testng.Assert;
 import testData.CompanyTestData;
 import utils.Browser;
 
-import javax.xml.xpath.XPath;
-
 public class ClientPage extends BasePage {
 
     @FindBy(xpath = "//a[@class='newbtn selenium-add-client-button']")
