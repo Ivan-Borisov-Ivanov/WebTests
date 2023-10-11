@@ -10,7 +10,7 @@ public class ItemTestData {
 
     String nameBg = "Компютър";
     String nameEn = "PC";
-    String pcPrice = "2300";
+    String pcPrice = "2350";
     String bankAccount = "BG18RZBB915501234567";
     String nameBgEmptyString = "";
     String nameEnEmptyString = "";
