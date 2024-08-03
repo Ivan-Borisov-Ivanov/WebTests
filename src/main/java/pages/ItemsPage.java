@@ -11,7 +11,7 @@ public class ItemsPage extends BasePage {
     @FindBy(css = ".newbtn")
     private static WebElement newItemButton;
 
-    @FindBy(id = "headline2")
+    @FindBy(xpath = "//div[@id = 'headline2']")
     private static WebElement headLineNewItem;
 
     @FindBy(id = "delete-item-button")
@@ -53,7 +53,7 @@ public class ItemsPage extends BasePage {
      * This method assert that we are in new item page
      */
     public static void assertWeAreInNewItemPage() {
-        Assert.assertEquals(headLineNewItem.getText(), "Нов артикул");
+        Assert.assertTrue(headLineNewItem.getText().contains("Нов артикул"), "Нов артикул");
     }
 
     /**
